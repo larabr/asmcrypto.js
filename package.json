@@ -5,6 +5,10 @@
   "homepage": "https://github.com/asmcrypto/asmcrypto.js",
   "main": "asmcrypto.all.js",
   "module": "asmcrypto.all.es8.js",
+  "browser": {
+    "buffer": false,
+    "crypto": false
+  },
   "license": "MIT",
   "author": {
     "name": "Ádám Lippai",
