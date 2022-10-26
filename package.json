@@ -2,7 +2,7 @@
   "name": "@openpgp/asmcrypto.js",
   "version": "2.3.3-0",
   "description": "Asm.js implementation of WebCrypto API",
-  "homepage": "https://github.com/asmcrypto/asmcrypto.js",
+  "homepage": "https://github.com/openpgpjs/asmcrypto.js",
   "main": "asmcrypto.all.js",
   "module": "asmcrypto.all.es8.js",
   "browser": {
