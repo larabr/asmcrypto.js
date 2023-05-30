@@ -1,6 +1,3 @@
-const local_atob = typeof atob === 'undefined' ? (str: string) => require('buffer').Buffer.from(str, 'base64').toString('binary') : atob;
-const local_btoa = typeof btoa === 'undefined' ? (str: string) => require('buffer').Buffer.from(str, 'binary').toString('base64') : btoa;
-
 export function string_to_bytes(str: string, utf8: boolean = false): Uint8Array {
   var len = str.length,
     bytes = new Uint8Array(utf8 ? 4 * len : len);
@@ -48,10 +45,6 @@ export function hex_to_bytes(str: string): Uint8Array {
   return bytes;
 }
 
-export function base64_to_bytes(str: string): Uint8Array {
-  return string_to_bytes(local_atob(str));
-}
-
 export function bytes_to_string(bytes: Uint8Array, utf8: boolean = false): string {
   var len = bytes.length,
     chars = new Array(len);
@@ -95,10 +88,6 @@ export function bytes_to_hex(arr: Uint8Array): string {
     str += h;
   }
   return str;
-}
-
-export function bytes_to_base64(arr: Uint8Array): string {
-  return local_btoa(bytes_to_string(arr));
 }
 
 export function pow2_ceil(a: number): number {

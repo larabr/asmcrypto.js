@@ -9,7 +9,7 @@ export class AES {
   public heap?: Uint8Array;
   public asm?: AES_asm;
   private readonly mode: string;
-  public padding: boolean; // TODO: This should be `private readonly`, hacking for AES-CFB?!
+  public padding?: boolean; // TODO: This should be `private readonly`, hacking for AES-CFB?!
   public pos: number = 0;
   public len: number = 0;
 
