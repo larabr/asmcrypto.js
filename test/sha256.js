@@ -1,6 +1,5 @@
-import * as asmCrypto from '../asmcrypto.all.es8';
-import chai from 'chai';
-const expect = chai.expect;
+import * as asmCrypto from '@openpgp/asmcrypto.js';
+import { expect } from 'chai';
 
 describe('SHA256', () => {
   const sha256_vectors = [

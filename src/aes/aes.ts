@@ -1,6 +1,6 @@
-import { AES_asm, AES_mode } from './aes.asm';
-import { _heap_init, _heap_write, is_bytes } from '../other/utils';
-import { IllegalArgumentError, SecurityError } from '../other/errors';
+import { AES_asm, AES_mode } from './aes.asm.js';
+import { _heap_init, _heap_write, is_bytes } from '../other/utils.js';
+import { IllegalArgumentError, SecurityError } from '../other/errors.js';
 
 const heap_pool: Uint8Array[] = [];
 const asm_pool: AES_asm[] = [];

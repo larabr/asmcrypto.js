@@ -13,10 +13,10 @@
  * you have to know the `dataLength` in advance and pass that value to the cipher options.
  */
 
-import { AES_asm } from './aes.asm';
-import { AES } from './aes';
-import { _heap_write } from '../other/utils';
-import { IllegalArgumentError, IllegalStateError, SecurityError } from '../other/errors';
+import { AES_asm } from './aes.asm.js';
+import { AES } from './aes.js';
+import { _heap_write } from '../other/utils.js';
+import { IllegalArgumentError, IllegalStateError, SecurityError } from '../other/errors.js';
 
 const _AES_CCM_adata_maxLength = 65279; // 2^16 - 2^8
 const _AES_CCM_data_maxLength = 4503599627370480; // 2^52 - 2^4

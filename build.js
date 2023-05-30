@@ -1,4 +1,4 @@
-import * as fs from 'fs-extra';
+import fs from 'fs-extra';
 import ts from 'typescript';
 import * as rollup from 'rollup';
 
@@ -71,19 +71,12 @@ import * as rollup from 'rollup';
   // Legacy browser export, as a bundle
   await es5bundle.write({
     file: 'asmcrypto.all.es5.js',
-    format: 'iife',
-    name: 'asmCrypto',
-  });
-
-  // Legacy browser export, as a bundle
-  await es5bundle.write({
-    file: 'asmcrypto.all.es5.mjs',
     format: 'es',
   });
 
   // NodeJS old
   await es5bundle.write({
-    file: 'asmcrypto.all.js',
+    file: 'asmcrypto.all.cjs',
     format: 'cjs',
   });
 

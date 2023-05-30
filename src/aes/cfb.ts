@@ -1,5 +1,5 @@
-import { AES } from './aes';
-import { joinBytes } from '../other/utils';
+import { AES } from './aes.js';
+import { joinBytes } from '../other/utils.js';
 
 export class AES_CFB {
   private aes: AES;

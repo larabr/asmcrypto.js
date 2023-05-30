@@ -1,5 +1,5 @@
-import { AES_ECB } from './ecb';
-import { AES_CBC } from './cbc';
+import { AES_ECB } from './ecb.js';
+import { AES_CBC } from './cbc.js';
 
 function mul2(data: Uint8Array): void {
   const t = data[0] & 0x80;

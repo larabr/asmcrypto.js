@@ -1,8 +1,8 @@
-import { bigint_asm, bigintresult } from './bigint.asm';
-import { string_to_bytes } from '../other/utils';
-import { IllegalArgumentError } from '../other/errors';
-import { BigNumber_extGCD, Number_extGCD } from './extgcd';
-import { getRandomValues } from '../other/get-random-values';
+import { bigint_asm, bigintresult } from './bigint.asm.js';
+import { string_to_bytes } from '../other/utils.js';
+import { IllegalArgumentError } from '../other/errors.js';
+import { BigNumber_extGCD, Number_extGCD } from './extgcd.js';
+import { getRandomValues } from '../other/get-random-values.js';
 
 ///////////////////////////////////////////////////////////////////////////////
 
