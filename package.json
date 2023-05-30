@@ -5,16 +5,12 @@
   "homepage": "https://github.com/openpgpjs/asmcrypto.js",
   "type": "module",
   "exports": {
-    ".": {
-      "import": "./asmcrypto.all.es8.js",
-      "require": "./asmcrypto.all.cjs"
-    },
-    "./*": "./dist_es8/*"
+    "./aes/*": {
+      "types": "./dist/aes/*",
+      "import": "./dist/aes/*"
+    }
   },
-  "browser": {
-    "buffer": false,
-    "crypto": false
-  },
+  "files": ["dist/"],
   "license": "MIT",
   "author": {
     "name": "Ádám Lippai",
@@ -42,6 +38,7 @@
     "@types/mocha": "^8.0.3",
     "@types/node": "^20.2.5",
     "chai": "^4.3.7",
+    "cpy-cli": "^4.2.0",
     "fs-extra": "^9.0.1",
     "mocha": "^10.2.0",
     "prettier": "^1.14.3",
@@ -52,9 +49,10 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "prepare": "node build.js",
-    "test": "node build.js && mocha test/*.js",
+    "build": "rm -rf dist && tsc && cpy 'src/aes/aes.asm*' dist/aes",
+    "prepare": "npm run build",
+    "test": "npm run build && mocha test/*.js",
+    "preversion": "rm -rf dist node_modules && npm ci && npm test",
     "prettier": "prettier --single-quote --trailing-comma all --write \"src/**/*.js\" \"src/**/*.ts\" --print-width 120"
-  },
-  "typings": "./dist_es8/entry-export_all.d.ts"
+  }
 }

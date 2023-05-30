@@ -3,7 +3,7 @@ import { AES_CBC } from '@openpgp/asmcrypto.js/aes/cbc.js';
 import { AES_CFB } from '@openpgp/asmcrypto.js/aes/cfb.js';
 import { AES_GCM } from '@openpgp/asmcrypto.js/aes/gcm.js';
 import { AES_CTR } from '@openpgp/asmcrypto.js/aes/ctr.js';
-import * as utils from '../dist_es8/other/utils.js';
+import * as utils from '../dist/other/utils.js';
 import { expect } from 'chai';
 import { Buffer } from 'buffer';
 
