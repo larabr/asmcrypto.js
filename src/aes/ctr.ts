@@ -1,6 +1,6 @@
-import { AES } from './aes';
-import { IllegalArgumentError } from '../other/errors';
-import { joinBytes } from '../other/utils';
+import { AES } from './aes.js';
+import { IllegalArgumentError } from '../other/errors.js';
+import { joinBytes } from '../other/utils.js';
 
 export class AES_CTR {
   private aes: AES;

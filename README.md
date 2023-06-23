@@ -1,7 +1,10 @@
-asmCrypto [![Build Status](https://travis-ci.org/asmcrypto/asmcrypto.js.svg?branch=master)](https://travis-ci.org/asmcrypto/asmcrypto.js) [![Join the chat at https://gitter.im/asmcrypto/asmcrypto.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/asmcrypto/asmcrypto.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+asmCrypto (openpgp.js fork)
 =========
 
-JavaScript implementation of popular cryptographic utilities with performance in mind.
+JavaScript implementation of AES cryptographic utilities with performance in mind.
+As of v3, compatibility with upstream repo (now deprecated) is broken: non-AES functions have been removed, and legacy targets (ES5) are no longer supported.
+
+This library is primarily needed as fallback for the WebCrypto API for AES-CFB (only implemented by Safari), as well as AES-GCM for 192-bit keys (not implemented by Chrome).
 
 Build & Test
 ------------
@@ -17,19 +20,3 @@ Running tests is always a good idea:
     npm test
 
 Congratulations! Now you have your `asmcrypto.js` ready to use ☺
-
-Support
------------
-
-* NodeJS 10
-* IE11
-* last two Chrome versions
-* last two Firefox versions and the latest Firefox ESR
-* last two Edge versions
-* last two Safari versions
-
-AsmCrypto 2.0
------------
-
-* Moved to TypeScript
-* I have no confident knowledge on random generation, so I don't feel right maintaining it. As of 2.0 all custom random generation and seeding code is removed, the underlying browsers and environments have to provide secure random.  

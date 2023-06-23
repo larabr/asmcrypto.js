@@ -1,6 +1,6 @@
-import { AES_asm, AES_mode } from './aes.asm';
-import { _heap_init, _heap_write, is_bytes } from '../other/utils';
-import { IllegalArgumentError, SecurityError } from '../other/errors';
+import { AES_asm, AES_mode } from './aes.asm.js';
+import { _heap_init, _heap_write, is_bytes } from '../other/utils.js';
+import { IllegalArgumentError, SecurityError } from '../other/errors.js';
 
 const heap_pool: Uint8Array[] = [];
 const asm_pool: AES_asm[] = [];
@@ -9,7 +9,7 @@ export class AES {
   public heap?: Uint8Array;
   public asm?: AES_asm;
   private readonly mode: string;
-  public padding: boolean; // TODO: This should be `private readonly`, hacking for AES-CFB?!
+  public padding?: boolean; // TODO: This should be `private readonly`, hacking for AES-CFB?!
   public pos: number = 0;
   public len: number = 0;
 

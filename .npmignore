@@ -1,6 +1,0 @@
-doc/
-node_modules/
-.idea/
-package-lock.json
-*.ts
-!*.d.ts

@@ -1,7 +1,7 @@
-import { IllegalArgumentError, IllegalStateError, SecurityError } from '../other/errors';
-import { _heap_write } from '../other/utils';
-import { AES } from './aes';
-import { AES_asm } from './aes.asm';
+import { IllegalArgumentError, IllegalStateError, SecurityError } from '../other/errors.js';
+import { _heap_write } from '../other/utils.js';
+import { AES } from './aes.js';
+import { AES_asm } from './aes.asm.js';
 
 const _AES_GCM_data_maxLength = 68719476704; // 2^36 - 2^5
 
